@@ -1,4 +1,4 @@
-import type { ReactNode } from "react"
+import type { ReactElement } from "react"
 
 interface Options {
   components: Record<string, string>
@@ -15,6 +15,6 @@ interface Options {
   }
 }
 
-export function serialize(data: ReactNode): string
+export function serialize(data: ReactElement): string
 
-export function deserialize(data: string, options?: Partial<Options>): ReactNode
+export function deserialize(data: string, options?: Partial<Options>): ReactElement
